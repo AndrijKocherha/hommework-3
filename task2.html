@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task3</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            3. Випадковим чином генерується число від 1 до 5. Спробуйте вгадати
+            число за 2 спроби.
+          </div>
+        </div>
+        <script>
+          const MIN_NUMBER = 1;
+          const MAX_NUBER = 5;
+
+          let randomNumber =
+            Math.floor(Math.random() * (MAX_NUBER - MIN_NUMBER + 1)) +
+            MIN_NUMBER;
+          document.write(`
+             число яке випало ${randomNumber} <br/>
+         `);
+
+          let userTryToGuessNumber = parseInt(
+            prompt("попробуйте вгадати від 1 до 5")
+          );
+
+          if (userTryToGuessNumber === randomNumber) {
+            document.write("ви вгадали з першої спроби");
+          } else {
+            let userTryToGuessNumber = parseInt(
+              prompt("попробуйте вгадати ще раз від 1 до 5")
+            );
+            if (userTryToGuessNumber === randomNumber) {
+              document.write("ви вгадали з другої спроби");
+            } else {
+              document.write("ви не вгадали з другої спроби");
+            }
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

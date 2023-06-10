@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            4. З клавіатури вводиться вік людини. Вивести на екран ким він є
+            (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+          </div>
+        </div>
+        <script>
+          const USER_AGE = parseInt(prompt("введіть свій вік"));
+          let whoIsTheUser;
+          if (USER_AGE >= 3 && USER_AGE <= 6) {
+            whoIsTheUser = "дитина у ссадочку";
+          } else if (USER_AGE >= 6 && USER_AGE <= 17) {
+            whoIsTheUser = "школяр";
+          } else if (USER_AGE >= 17 && USER_AGE <= 21) {
+            whoIsTheUser = "студент";
+          } else if (USER_AGE >= 21 && USER_AGE <= 60) {
+            whoIsTheUser = "працівник";
+          } else if (USER_AGE >= 68) {
+            whoIsTheUser = "пенціонер";
+          }
+          document.write(`
+               ${whoIsTheUser}
+            `);
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

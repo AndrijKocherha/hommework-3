@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task1</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            1. З клавіатури вводяться імена двох дітей та кількість у них
+            цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок
+            є більшою, або вивести, що
+          </div>
+        </div>
+        <script>
+          let kidOne = parseInt(prompt("кількіть цукерок першої дитини"));
+          let kidTwo = parseInt(prompt("кількіть цукерок другої дитини"));
+          if (kidOne > kidTwo)
+            document.write(`
+                   в першої дитини більше
+                `);
+          else if (kidOne === kidTwo)
+            document.write(`
+                   порівну
+                `);
+          else
+            document.write(`
+                   в другої дитини більше
+                `);
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

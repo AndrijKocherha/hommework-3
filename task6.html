@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task7</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            7. З клавіатури вводиться номер місяця. Вивести до якої пори він
+            відноситься
+          </div>
+        </div>
+        <script>
+          let numberOfMounth = parseInt(prompt("введіть номер місяця"));
+          let season;
+          switch (numberOfMounth) {
+            case 1:
+            case 2:
+            case 12:
+              season = "Зима";
+              break;
+            case 3:
+            case 4:
+            case 5:
+              season = "Весна";
+              break;
+            case 6:
+            case 7:
+            case 8:
+              season = "Літо";
+              break;
+            case 9:
+            case 10:
+            case 11:
+              season = "Осінь";
+              break;
+
+            default:
+              season = "придуманий місяць";
+              break;
+          }
+          alert(`${season}`);
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

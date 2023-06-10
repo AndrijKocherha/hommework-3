@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task2</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            2. З клавіатури вводиться ціна товару і кількість грошей. Якщо
+            грошей не вистачає то відмовляємо у покупці, інакше, якщо ще
+            залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+          </div>
+        </div>
+        <script>
+          let productPrice = parseFloat(prompt("ціна товару"));
+          const userMoney = parseFloat(prompt("кількіть грошей в користувача"));
+          const loteryPrice = 4;
+          let restOfUserMoney = userMoney - productPrice;
+          if (userMoney < productPrice) {
+            document.write(`
+               у вас недостатьно грошей
+            `);
+          } else {
+            document.write(`
+               дякую за покупкою
+            `);
+            if (restOfUserMoney >= loteryPrice) {
+              if (confirm("хочете купити лотерею за 4 грн?")) {
+                alert("удачі");
+              } else {
+                alert("ідіть додому");
+              }
+            }
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
